@@ -1,6 +1,8 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
+function renderLicenseBadge(licenseArray) {
+  let license = licenseArray.toString();
+  console.log(license);
   const badges = [
     { name: 'The MIT License', badge: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)' },
     { name: 'Mozilla Public License 2.0', badge: '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)' },
@@ -8,15 +10,16 @@ function renderLicenseBadge(license) {
     { name: 'Eclipse Public License 1.0', badge: '[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)' },
     { name: 'IBM Public License Version 1.0', badge: '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)' },
   ]
-  let thisLicense = badges.find(license => license.name === `${license}`)
+  let thisLicense = badges.find(element => element.name === `${license}`)
   
-  if (thisLicense.trim().length()) return thisLicense.badge
+  if (license.trim().length) return thisLicense.badge
   else return ("");
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {
+function renderLicenseLink(licenseArray) {
+  let license = licenseArray.toString();
   const licenseLinks = [
     { name: 'The MIT License', link: '<a href = "https://opensource.org/licenses/MIT">The MIT License</a>' },
     { name: 'Mozilla Public License 2.0', link: '<a href = "https://opensource.org/licenses/MPL-2.0">MPL-2.0</a>' },
@@ -24,19 +27,19 @@ function renderLicenseLink(license) {
     { name: 'Eclipse Public License 1.0', link: '<a href = "https://opensource.org/licenses/EPL-1.0">EPL-1.0</a>' },
     { name: 'IBM Public License Version 1.0', link: '<a href = "https://opensource.org/licenses/IPL-1.0">IPL-1.0</a>' },
   ]
-  let thisLicense = licenseLinks.find(license => license.name === `${license}`)
+  let thisLicense = licenseLinks.find(element => element.name === license)
   
-  if (thisLicense.trim().length()) return thisLicense.link
+  if (license.trim().length) return thisLicense.link
   else return ("");
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license, data) {
-
+function renderLicenseSection(licenseArray, data) {
+  let license = licenseArray.toString();
   const licenseSections = [
     { name: 'The MIT License', 
-    text: `Copyright 2021 ${data.name}
+    text: `Copyright 2021 ${data.github}
 
     Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
     
@@ -375,9 +378,9 @@ function renderLicenseSection(license, data) {
     This Agreement is governed by the laws of the State of New York and the intellectual property laws of the United States of America. No party to this Agreement will bring a legal action under this Agreement more than one year after the cause of action arose. Each party waives its rights to a jury trial in any resulting litigation.` },
   ]
   
-  let thisLicense = licenseSections.find(license => license.name === `${license}`)
+  let thisLicense = licenseSections.find(element => element.name === license)
 
-  if (thisLicense.trim().length()) {return `${renderLicenseLink(license)}
+  if (license.trim().length) {return `${renderLicenseLink(license)}
   ${thisLicense.text}
   `}
   else {
@@ -390,7 +393,7 @@ function generateMarkdown(data) {
 
   return `${renderLicenseBadge(data.license)}
   
-  # <a name = "Title"${data.title}</a>
+  # <a name = "Title">${data.title}</a>
   <a href = "<ScreenCast Link here>"> Screencastify Video Demonstration </a>
   
   ## <a name = "Description">Description</a>
@@ -454,8 +457,8 @@ function generateMarkdown(data) {
   For questions or comments, please go to:
   <a href = "https://github.com/${data.github}">${data.github}'s GitHub Profile</a>
   OR
-  Contact ${data.name} at:
+  Contact ${data.github} at:
   [${data.email}](mailto:${data.email})`
   }
 
-module.exports = generateMarkdown;
+module.exports = {generateMarkdown};
