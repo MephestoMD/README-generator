@@ -12,7 +12,7 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  if (data.table) {
+
   return `# <a name = "Title"${data.title}</a>
   <a href = "<ScreenCast Link here>"> Screencastify Video Demonstration </a>
   
@@ -44,9 +44,11 @@ function generateMarkdown(data) {
       * [What I learned](#subLearned)
   3. [Installation](#Installation)
   4. [Usage](#Usage)
-  5. [Contributing](#Contributing)
-  6. [Tests](#Tests)
-  7. [Questions](#Questions)
+  5. [Credits](#Credits)
+  6. [License](#License)
+  7. [Contributing](#Contributing)
+  8. [Tests](#Tests)
+  9. [Questions](#Questions)
   
   ## <a name = "Installation">Installation</a>
 
@@ -58,6 +60,10 @@ function generateMarkdown(data) {
 
   ## <a name = "Contributing">Contributing</a>
 
+  ## <a name = "Credits">Credits</a>
+
+  ## <a name = "License">License</a>
+
   ${data.contributing}
 
   ## <a name = "Tests">Tests</a>
@@ -66,53 +72,11 @@ function generateMarkdown(data) {
 
   ## <a name = "Questions">Questions</a>
 
-
-
-
-
-
-  `
+  For questions or comments, please go to:
+  <a href = "https://github.com/${data.github}">${data.github}'s GitHub Profile</a>
+  OR
+  Contact ${data.name} at:
+  [${data.email}](mailto:${data.email})`
   }
-  else {
-    return `# <a name = "Title"${data.title}</a>
-    <a href = "<ScreenCast Link here>"> Screencastify Video Demonstration </a>
-    
-    ## Description
-    
-    ### Motivation
   
-    ${data.motivation}
-    
-    ### Build Steps
-  
-    ${data.build}
-    
-    ### Problems
-  
-    ${data.problems}
-    
-    ### What I learned
-  
-    ${data.learn}
-    
-    ## Installation
-  
-    ${data.steps}
-    
-    ## Usage
-  
-    ${data.usage}
-  
-    ## Contributing
-  
-    ${data.contributing}
-  
-    ## Tests
-  
-    ${data.tests}
-  
-    ## Questions
-  }
-
-}
 module.exports = generateMarkdown;
