@@ -394,7 +394,7 @@ function generateMarkdown(data) {
   return `${renderLicenseBadge(data.license)}
   
   # <a name = "Title">${data.title}</a>
-  <a href = "<ScreenCast Link here>"> Screencastify Video Demonstration </a>
+  <a href = "https://drive.google.com/file/d/1HdfRzSnl2AniHa7n9MdE-p3G4hOXBn0r/view"> Screencastify Video Demonstration </a>
   
   ## <a name = "Description">Description</a>
   
@@ -424,11 +424,10 @@ function generateMarkdown(data) {
       * [What I learned](#subLearned)
   3. [Installation](#Installation)
   4. [Usage](#Usage)
-  5. [Credits](#Credits)
-  6. [License](#License)
-  7. [Contributing](#Contributing)
-  8. [Tests](#Tests)
-  9. [Questions](#Questions)
+  5. [License](#License)
+  6. [Contributing](#Contributing)
+  7. [Tests](#Tests)
+  8. [Questions](#Questions)
   
   ## <a name = "Installation">Installation</a>
 
@@ -436,13 +435,11 @@ function generateMarkdown(data) {
   
   ## <a name = "Usage">Usage</a>
 
-  ${data.usage}
+  ${data.instructions}
 
   ## <a name = "Contributing">Contributing</a>
 
   ${data.contributing}
-
-  ## <a name = "Credits">Credits</a>
 
   ## <a name = "License">License</a>
 

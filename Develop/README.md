@@ -1,13 +1,13 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
   # <a name = "Title">README-generator</a>
-  <a href = "<ScreenCast Link here>"> Screencastify Video Demonstration </a>
+  <a href = "https://drive.google.com/file/d/1HdfRzSnl2AniHa7n9MdE-p3G4hOXBn0r/view"> Screencastify Video Demonstration </a>
   
   ## <a name = "Description">Description</a>
   
   ### <a name = "subMotivation">Motivation</a>
 
-  To make the lives of developers easier by giving them a streamlined, consistent method for developing good README files for their repositories
+  To make the lives of developers easier by giving them a streamlined, consistent method for developing good README files for their repositories.
   
   ### <a name = "subBuild">Build Steps</a>
 
@@ -31,25 +31,22 @@
       * [What I learned](#subLearned)
   3. [Installation](#Installation)
   4. [Usage](#Usage)
-  5. [Credits](#Credits)
-  6. [License](#License)
-  7. [Contributing](#Contributing)
-  8. [Tests](#Tests)
-  9. [Questions](#Questions)
+  5. [License](#License)
+  6. [Contributing](#Contributing)
+  7. [Tests](#Tests)
+  8. [Questions](#Questions)
   
   ## <a name = "Installation">Installation</a>
 
-  Clone the repository to your computer.
+  Clone the repository to your local machine.
   
   ## <a name = "Usage">Usage</a>
 
-  undefined
+  Open index.js from the local repo folder on your computer, run index.js using the command node index.js in any command terminal, answer the questions as they appear in the terminal, and the README.md file will be automatically created in your working directory.
 
   ## <a name = "Contributing">Contributing</a>
 
-  Please see https://www.contributor-covenant.org/ for contributition guidelines
-
-  ## <a name = "Credits">Credits</a>
+  Please see https://www.contributor-covenant.org/ for contributition guidelines.
 
   ## <a name = "License">License</a>
 
